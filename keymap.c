@@ -1,5 +1,20 @@
 #include QMK_KEYBOARD_H
 
+/* combo */
+
+const key_override_t vi_left_override = ko_make_basic(MOD_MASK_ALT, KC_H, KC_LEFT);
+const key_override_t vi_down_override = ko_make_basic(MOD_MASK_ALT, KC_J, KC_DOWN);
+const key_override_t vi_up_override = ko_make_basic(MOD_MASK_ALT, KC_K, KC_UP);
+const key_override_t vi_right_override = ko_make_basic(MOD_MASK_ALT, KC_L, KC_RIGHT);
+
+const key_override_t **key_overrides = (const key_override_t *[]){
+    &vi_left_override,
+    &vi_down_override,
+    &vi_up_override,
+    &vi_right_override,
+    NULL // Null terminate the array of overrides!
+};
+
 /* tapdance */
 
 // Tap Dance declarations
